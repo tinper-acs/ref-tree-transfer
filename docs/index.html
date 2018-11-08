@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title></title>
+    <title>ref-tree-transfer树穿梭参照</title>
     <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.css"/>
     <link type="text/css" rel="stylesheet" href="assets/css/bootstrap-responsive.css"/>
     <link type="text/css" rel="stylesheet" href="assets/css/pilcrow.css"/>
@@ -14,9 +14,242 @@
   <div class="container-fluid">
     <div class="row-fluid">
       <div class="span3"><ul class="nav nav-list">
+    <li class="sidebar-header-1"><a href="#ref-tree-transfer树穿梭参照">ref-tree-transfer树穿梭参照</a></li>
+    <li class="sidebar-header-2"><a href="#代码演示">代码演示</a></li>
+    <li class="sidebar-header-2"><a href="#树形参照分类为下列三种">树形参照分类为下列三种</a></li>
+    <li class="sidebar-header-3"><a href="#reftreetransfer">RefTreeTransfer</a></li>
+    <li class="sidebar-header-3"><a href="#reftreetransferwithinput">RefTreeTransferWithInput</a></li>
+    <li class="sidebar-header-3"><a href="#createreftreetransfer">createRefTreeTransfer</a></li>
+    <li class="sidebar-header-2"><a href="#api">API</a></li>
+    <li class="sidebar-header-2"><a href="#reftreetransferwithinput-增量-api">RefTreeTransferWithInput 增量 API</a></li>
+    <li class="sidebar-header-2"><a href="#参数详解">参数详解</a></li>
+    <li class="sidebar-header-2"><a href="#开发调试">开发调试</a></li>
 </ul>
       </div>
-      <div class="span9 main"><p>### </p>
+      <div class="span9 main"><h1 id="ref-tree-transfer树穿梭参照">ref-tree-transfer树穿梭参照</h1>
+<blockquote>
+<p>具有单选多选的树穿梭参照</p>
+</blockquote>
+<h2 id="代码演示">代码演示</h2>
+<pre class="hljs"><code>$ ynpm install ref-tree-transfer --save
+或
+$ ynpm install @yonyou/ref-tree-transfer --save
+
+引入
+
+<span class="hljs-keyword">import</span> {RefTreeTransfer, RefTreeTransferWithInput, createRefTreeTransfer} <span class="hljs-keyword">from</span> ref-tree-transfe<span class="hljs-string">r';
+或
+import {RefTreeTransfer, RefTreeTransferWithInput, createRefTreeTransfer} from '</span>@yonyou/ref-tree-transfe<span class="hljs-string">r';
+</span></code></pre><h2 id="树形参照分类为下列三种">树形参照分类为下列三种</h2>
+<h3 id="reftreetransfer">RefTreeTransfer</h3>
+<pre class="hljs"><code>参照弹出窗，没有输入框，使用时可根据自己需要定义具体的文本框。</code></pre><h3 id="reftreetransferwithinput">RefTreeTransferWithInput</h3>
+<pre class="hljs"><code>带文本框的参照弹出窗。在 RefTreeTransfer 基础上封装实现。</code></pre><h3 id="createreftreetransfer">createRefTreeTransfer</h3>
+<pre class="hljs"><code>非 ReactJS 调用方式，与 RefTreeTransfer 相同没有输入框，使用时可根据自己需要定义具体的文本框。</code></pre><h2 id="api">API</h2>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+<th>必选</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td><code>string</code></td>
+<td>空</td>
+<td>打开上传的模态框显示的标题文字</td>
+<td>否</td>
+</tr>
+<tr>
+<td>className</td>
+<td><code>string</code></td>
+<td>空</td>
+<td>参照class样式，作用于弹出层和 RefTreeTransferWithInput 输入框的样式，默认为空。</td>
+<td>否</td>
+</tr>
+<tr>
+<td>searchable</td>
+<td><code>bool</code></td>
+<td>true</td>
+<td>是否显示搜索框，弹出层是否带有搜索框，true 显示，false 不显示。</td>
+<td>否</td>
+</tr>
+<tr>
+<td>emptyBtn</td>
+<td><code>bool</code></td>
+<td>true</td>
+<td>是否显示清空按钮，true 显示，false 不显示</td>
+<td>否</td>
+</tr>
+<tr>
+<td>multiple</td>
+<td><code>bool</code></td>
+<td>false</td>
+<td>是否单选， true 单选，false 多选</td>
+<td>否</td>
+</tr>
+<tr>
+<td>backdrop</td>
+<td><code>bool</code></td>
+<td>true</td>
+<td>弹出层是否有模态层，true 显示，false 不显示</td>
+<td>否</td>
+</tr>
+<tr>
+<td>buttons</td>
+<td><code>object</code></td>
+<td><code>okText</code>: &quot;确认&quot;, //确认按钮<br/><code>cancelText</code>: &quot;取消&quot;, //取消按钮<br/><code>clearText</code>: &quot;清空已选&quot; //清空已选按钮</td>
+<td>弹出层工具栏三个按钮的文字，若 bottomButton 为 false 则该配置无效。</td>
+<td>否</td>
+</tr>
+<tr>
+<td>bottomButton</td>
+<td><code>bool</code></td>
+<td>true</td>
+<td>是否显示弹出层下边框工具栏， false true 显示<code>注意该属性为临时兼容配置后期可能随时会弃用</code></td>
+<td>否</td>
+</tr>
+<tr>
+<td>textOption</td>
+<td><code>object</code></td>
+<td>--</td>
+<td>左边树和右边处穿梭框的标题<br /> 如：<br />{<br />    leftTitle:&#39;树&#39;,<br />    rightTitle:&#39;穿梭框&#39;<br />}</td>
+<td>否</td>
+</tr>
+<tr>
+<td>hasPage</td>
+<td><code>bool</code></td>
+<td>true</td>
+<td>是否有分页条，true 有，false 没有</td>
+<td>否</td>
+</tr>
+<tr>
+<td>tabData</td>
+<td><code>array</code></td>
+<td>true</td>
+<td>当参照有多个类型的数据时可启用tab标签页来区分，当个点击页签的时候，会根据配置的key再去查询。如：<br />[<br />{&quot;title&quot;:&quot;常用&quot;,&quot;key&quot;:&quot;commonUse&quot;},<br /> {&quot;title&quot;:&quot;全部&quot;,&quot;key&quot;:&quot;total&quot;},<br />{&quot;title&quot;:&quot;推荐&quot;,&quot;key&quot;:&quot;recommed&quot;}<br />]</td>
+<td>否</td>
+</tr>
+<tr>
+<td>defaultExpandAll</td>
+<td><code>bool</code></td>
+<td>false</td>
+<td>展开所有节点 true 展开，false 不展开</td>
+<td>否</td>
+</tr>
+<tr>
+<td>checkStrictly</td>
+<td><code>bool</code></td>
+<td>false</td>
+<td>heckable状态下节点选择完全受控（父子节点选中状态不再关联）, false 关联选择，true 不关联</td>
+<td>否</td>
+</tr>
+<tr>
+<td>param</td>
+<td><code>objecet</code></td>
+<td>{}</td>
+<td>接口请求参数</td>
+<td>是</td>
+</tr>
+<tr>
+<td>refModelUrl</td>
+<td><code>object</code></td>
+<td>{tableBodyUrl:&#39;&#39;,tableBarUrl:&#39;&#39;}</td>
+<td>弹出层数据接口地址，为了兼容其他参照保留了多连接配置。<br/>如：<br/>{ <br/>treeUrl: &#39;/api/user/blobRefTreeTransfer.json&#39;,<br/>tableBodyUrl:&#39;blobRefTreeTransferGrid&#39;,//表体请求<br />tableBarUrl:&#39;refInfo&#39;,//表头请求<br />}</td>
+<td>是</td>
+</tr>
+<tr>
+<td>onSave</td>
+<td><code>function( record:object )</code></td>
+<td>--</td>
+<td>保存回调函数，返回已选择的记录详细数据。</td>
+<td>否</td>
+</tr>
+<tr>
+<td>onCancel `</td>
+<td>function(  )`</td>
+<td>--</td>
+<td>关闭弹出层</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<h2 id="reftreetransferwithinput-增量-api">RefTreeTransferWithInput 增量 API</h2>
+<blockquote>
+<p><span style="color: red; font-size: 15px;">注意:以下参数为 <code>&lt;RefTreeTransferWithInput/&gt;</code>独有。对其他两个类型的引用无效。</span></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+<th>必选</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>displayField</td>
+<td><code>string 或 function</code></td>
+<td>&#39;{refname}&#39;</td>
+<td>记录中显示的键。<br/>当为字符串时则会根据<code>{}</code>包裹的增则匹配替换。<br/>如：<code>&#39;人员姓名：{refname}，编号：{refcode}&#39;</code><br/>当为函数时则需自定义返回内容，参数为迭代已选择的记录。<br/>如：<br/>displayField: (record)=&gt;  ${record.refname}-${record.refname}</td>
+<td>否</td>
+</tr>
+<tr>
+<td>valueField</td>
+<td><code>string</code></td>
+<td>&#39;refcode&#39;</td>
+<td>待提交的 value 的键。</td>
+<td>否</td>
+</tr>
+<tr>
+<td>checkedArray</td>
+<td><code>array</code></td>
+<td>[]</td>
+<td>已选的数据详细记录，此配置为本地配置不做缓存不做服务器校验。`</td>
+<td>否</td>
+</tr>
+<tr>
+<td>matchUrl</td>
+<td><code>string</code></td>
+<td>空</td>
+<td>查询并校验 checkedArray 中的 valueField 对应参照的详细记录。</td>
+<td>否</td>
+</tr>
+<tr>
+<td>rules</td>
+<td><code>array</code></td>
+<td>[]</td>
+<td>表单校验规则，参考 rc-from，或使用的 from 组件具体的校验规则写法。`如： rules：[{required: true, message: &#39;请选择该引用&#39;,}]</td>
+<td>否</td>
+</tr>
+<tr>
+<td>form</td>
+<td><code>form：object</code></td>
+<td>{}</td>
+<td>当前表单的 form 对象。</td>
+<td>否.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="参数详解">参数详解</h2>
+<pre class="hljs"><code>eg:
+
+checkedArray:
+<span class="hljs-comment">//需要组装出详细记录，但只要保证 displayField 和 valueField 所标记的字段存在即可， 如：</span>
+[
+    { <span class="hljs-string">"refpk"</span>: <span class="hljs-string">"857c41b"</span>,<span class="hljs-string">"refcode"</span>: <span class="hljs-string">"wujd"</span>, <span class="hljs-string">"refname"</span>: <span class="hljs-string">"吴惊道"</span> },
+    { <span class="hljs-string">"refpk"</span>: <span class="hljs-string">"65c2c42"</span>, <span class="hljs-string">"refcode"</span>: <span class="hljs-string">"ms"</span>, <span class="hljs-string">"refname"</span>: <span class="hljs-string">"马帅"</span> }
+]</code></pre><h2 id="开发调试">开发调试</h2>
+<p><code>`</code>sh</p>
+<p>$ cd </p>
+<p>ac-refer/packages/ref-treetransfer</p>
+<p>$ npm install</p>
+<p>$ npm run dev</p>
       </div>
     </div>
   </div>

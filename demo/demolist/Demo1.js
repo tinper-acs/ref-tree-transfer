@@ -1,12 +1,14 @@
 /**
  *
- * @title ref-treetransfer树穿梭参照
+ * @title ref-tree-transfer
  * @description 具有单选多选的树穿梭参照
  *
  */
 
 import React, { Component } from 'react';
 import {RefTreeTransfer, RefTreeTransferWithInput, createRefTreeTransfer} from 'ref-tree-transfer';
+
+import Button from 'bee-button';
 import 'ref-tree-transfer/dist/index.css';
 import Form from "bee-form";
 
@@ -29,7 +31,6 @@ const option = {
       tableBodyUrlSearch: ''
   },
   jsonp: true,
-  hearders: {},
   displayField: '{refname}-{refcode}',//显示内容的键
   valueField: 'refcode',//真实 value 的键
   checkedArray:[
@@ -60,11 +61,11 @@ class Demo1 extends Component {
                 <span className='error'>
                     {getFieldError('refcode')}
                 </span>
-                <button onClick={() => {
+                <Button colors="primary" onClick={() => {
                     this.props.form.validateFields((err, values) => {
                         console.log(err, values)
                     });
-                }}>submit</button>
+                }}> submit </Button>
             </div>
         )
     }
