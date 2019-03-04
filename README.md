@@ -24,7 +24,7 @@ $ ynpm install @yonyou/ref-tree-transfer --save
  */
 
 import React, { Component } from 'react';
-import RefTreeTransferWithInput, { RefTreeTransfer, createRefTreeTransfer } from 'ref-tree-transfer;
+import RefTreeTransferWithInput, { RefTreeTransfer, createRefTreeTransfer } from 'ref-tree-transfer';
 import Form from "bee-form";
 
 const option = {
