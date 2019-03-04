@@ -16,13 +16,6 @@ $ ynpm install @yonyou/ref-tree-transfer --save
  *
  */
 
-/**
- *
- * @title ref-treetransfer树穿梭参照
- * @description 具有单选多选的树穿梭参照
- *
- */
-
 import React, { Component } from 'react';
 import RefTreeTransferWithInput, { RefTreeTransfer, createRefTreeTransfer } from 'ref-tree-transfer';
 import Form from "bee-form";
