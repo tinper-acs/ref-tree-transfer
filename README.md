@@ -107,7 +107,7 @@ export default Form.createForm()(Demo1);
 参数 | 类型 |默认值| 说明 | 必选
 ---|---|--- | --- | ---
 title |``string``|空 |打开上传的模态框显示的标题文字 | 否
-className |`string`|空 | 参照class样式，作用于弹出层和 RefTreeTransferWithInput 输入框的样式，默认为空。 | 否
+className |`string`|空 | 参照class样式，作用于弹出层和 RefTreeTransferWithInput 输入框的样式，默认为空。'ref-walsin-modal'参照使用另外一种风格 | 否
 searchable |`bool`|true |是否显示搜索框，弹出层是否带有搜索框，true 显示，false 不显示。 | 否
 emptyBtn |`bool`|true |是否显示清空按钮，true 显示，false 不显示 | 否
 multiple |`bool`| false |是否单选， true 单选，false 多选 | 否
