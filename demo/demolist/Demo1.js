@@ -6,7 +6,7 @@
  */
 
 import React, { Component } from 'react';
-import {RefTreeTransfer, RefTreeTransferWithInput, createRefTreeTransfer} from 'ref-tree-transfer';
+import RefTreeTransferWithInput,{RefTreeTransfer, createRefTreeTransfer} from 'ref-tree-transfer';
 
 import Button from 'bee-button';
 import 'ref-tree-transfer/dist/index.css';

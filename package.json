@@ -91,7 +91,6 @@
     "fetch": "^1.1.0",
     "fetch-mock": "^7.2.5",
     "mockjs": "^1.0.1-beta3",
-    "ref-multiple-selection": "0.0.3",
-    "ref-tree-transfer": "0.0.7"
+    "ref-tree-transfer": "1.0.10-beta"
   }
 }
