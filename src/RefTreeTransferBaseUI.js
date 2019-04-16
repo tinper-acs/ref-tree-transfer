@@ -5,7 +5,6 @@ import FormControl from 'bee-form-control';
 import RefCoreButton from 'ref-core/lib/refs/RefCoreButton';
 import TransferDiv from './transferUI';
 import LeftTree from './leftTreeUI';
-import './RefTreeTransferBaseUI.less';
 
 const propTypes = {
   showModal: PropTypes.bool,
@@ -53,6 +52,8 @@ class RefTreeTransferBaseUI extends Component {
     }
   }
   onSave = () =>{
+    // 带有input框，这个props.onSave是RefCoreWithInput中的onSave然后在RefCoreWithInput中再调用自定义的传进来的onsave
+    // 不带有input框，props.onSave直接调用自定义的传进来的onsave
 		let { valueField } = this.props;
 		var { transferData=[], targetKeys=[] } = this.props;
 		let needTransferData = [];
@@ -106,8 +107,6 @@ class RefTreeTransferBaseUI extends Component {
       //transfer
       transferData=[],
       setTargetKeys,
-      transferSave,
-      transferCancel,
       targetKeys,
     } = this.props;
     let { leftTitle = '默认树标题', rightTitle = '默认穿梭框' } = textOption;
@@ -149,8 +148,6 @@ class RefTreeTransferBaseUI extends Component {
               displayField={displayField}
               valueField={valueField}
               setTargetKeys={setTargetKeys}
-              transferSave={transferSave}
-              transferCancel={transferCancel}
               buttons={buttons}
               isHasSearch={refModelUrl.tableBodyUrlSearch}
               searchPlaceholder={searchPlaceholder}

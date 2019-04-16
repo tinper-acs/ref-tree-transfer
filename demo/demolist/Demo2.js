@@ -6,6 +6,7 @@
  */
 import React, { Component } from 'react';
 import {RefTreeTransferWithInput} from '../../src/index';
+import '../../src/index.less';
 class Demo2 extends Component {
 	constructor(props) {
 		super(props);

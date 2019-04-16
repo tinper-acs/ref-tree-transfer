@@ -167,24 +167,6 @@ export default class TransferDiv extends Component {
 			selectedKeys: sourceSelectedKeys.concat(targetSelectedKeys)
 		})
 	}
-
-	saveBtnClick() {
-		let { valueField } = this.props;
-		var { transferData, targetKeys } = this.state;
-		let needTransferData = []
-		targetKeys.forEach((v, i) => {
-			transferData.forEach((v2, i2) => {
-				if (v == v2[valueField]) {
-					needTransferData.push(v2)
-				}
-			})
-		})
-		this.props.transferSave(targetKeys, needTransferData)
-	}
-	cancelBtnClick() {
-		this.props.transferCancel()
-	}
-
 	render() {
 		const noDataDisplay = (<div>无数据</div>);
 		var { transferData, sourceDesc, targetDesc, selectedKeys, targetKeys } = this.state;

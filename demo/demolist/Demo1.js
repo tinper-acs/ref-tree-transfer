@@ -6,6 +6,7 @@
  */
 import React, { Component } from 'react';
 import RefTreeTransferBaseUI,{RefTreeTransferWithInput} from '../../src/index';
+import '../../src/index.less';
 import {Button} from 'tinper-bee';
 class Demo2 extends Component {
 	constructor(props) {
@@ -86,7 +87,7 @@ class Demo2 extends Component {
 			className:'',
 			backdrop:true,
 			refModelUrl:{},
-			displayField:'{refname}-{refcode}',
+			displayField:'{refname}-{refcode}-jaja',
 			valueField:'refcode',
 			lang:'zh_TW',
 			theme : 'ref-red',
