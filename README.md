@@ -4,8 +4,7 @@
 
 ```shell
 $ ynpm install ref-tree-transfer --save
-或
-$ ynpm install @yonyou/ref-tree-transfer --save
+
 ```
 ```javascript
 
@@ -127,8 +126,6 @@ jsonp| `bool` | false | treeUrl、tableBodyUrl和tableBodyUrlSearch的request请
 headers| -- | -- | matchUrl的request请求传参headers| 否
 onMatchInitValue| `function(data)` | -- | 返回matchUrl请求的全部数据|否
 onAfterAjax| `function(data)`| -- |treeUrl请求后的回调，返回全部数据| 否
-defaultSelectNode| `object` | -- |已选的树节点并以此进行tableBodyUrl请求|否
-isHasSearch| `bool` | false|穿梭框是否有搜索框 |否
 
 ## RefTreeTableWithInput 增量 API
 <span style="color: red; font-size: 15px;">注意:以下参数为 `<RefTreeTableWithInput/>`独有。对其他两个类型的引用无效。</span>
