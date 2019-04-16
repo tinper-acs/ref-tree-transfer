@@ -1,5 +1,5 @@
+
 import RefWithInput from 'ref-core/lib/refs/RefCoreWithInput';
-// import 'ref-core/lib/refs/refcorewithinput.css';
 import { createRefModal, createRefInput } from 'ref-core/lib/utils/createApi';
 import RefCoreGlobal from 'ref-core/lib/refs/RefCoreGlobal';
 import React from 'react';
@@ -41,9 +41,7 @@ function createRefTreeTransferModal(props, callback) {
     }
   });
 }
-export default RefTreeTransferWithInput;
+export default RefTreeTransferBaseUI;
 export {
-  RefTreeTransfer,
-  createRefTreeTransfer,
-  createRefTreeTransferModal,
+  RefTreeTransferWithInput,
 };

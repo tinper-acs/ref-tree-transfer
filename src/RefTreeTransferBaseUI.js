@@ -21,7 +21,6 @@ const propTypes = {
   lang: PropTypes.string,
   handleTreeSelect: PropTypes.func,
   onChangerightSearch: PropTypes.func,
-  // onChangeleftSearch: PropTypes.func,
 }
 const defaultProps = {
   showModal: false,
@@ -45,7 +44,6 @@ const defaultProps = {
   lang: 'zh_CN',
   handleTreeSelect: () => { },
   onChangerightSearch: () => { },
-  // onChangeleftSearch: () => { },
 }
 //refpk
 class RefTreeTransferBaseUI extends Component {
@@ -111,7 +109,6 @@ class RefTreeTransferBaseUI extends Component {
       transferSave,
       transferCancel,
       targetKeys,
-      // onChangeleftSearch,
     } = this.props;
     let { leftTitle = '默认树标题', rightTitle = '默认穿梭框' } = textOption;
     return (
