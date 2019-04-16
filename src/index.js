@@ -4,6 +4,7 @@ import { createRefModal, createRefInput } from 'ref-core/lib/utils/createApi';
 import RefCoreGlobal from 'ref-core/lib/refs/RefCoreGlobal';
 import React from 'react';
 import 'ref-core/css/refcore.css';
+import './index.less';
 import RefTreeTransferBaseUI from './RefTreeTransferBaseUI';
 function RefTreeTransfer(props) {
   return (
