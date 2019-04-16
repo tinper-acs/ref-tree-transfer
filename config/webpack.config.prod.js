@@ -54,12 +54,12 @@ module.exports = webpackMerge(baseConfig, {
   },
   optimization: {
     minimizer: [
-      new UglifyJsPlugin({
-        cache: true,
-        parallel: true,
-        sourceMap: true
-      }),
-      new OptimizeCSSAssetsPlugin({})  // use OptimizeCSSAssetsPlugin
+      // new UglifyJsPlugin({
+      //   cache: true,
+      //   parallel: true,
+      //   sourceMap: true
+      // }),
+      // new OptimizeCSSAssetsPlugin({})  // use OptimizeCSSAssetsPlugin
     ], 
   },
   plugins: [
