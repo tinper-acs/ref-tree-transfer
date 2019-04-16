@@ -120,7 +120,7 @@ class RefTreeTransferBaseUI extends Component {
         className={` ${theme} ref-core-modal ${className} ref-core ref-tree-transfer`}
         size="xlg"
         backdrop={backdrop}
-        onHide={transferCancel}
+        onHide={()=>{this.onClickBtn('cancel')}}
       >
         <Modal.Header closeButton={true}>
           <Modal.Title > {title}</Modal.Title>

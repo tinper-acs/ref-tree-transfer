@@ -14,6 +14,7 @@ class Demo1 extends Component {
 	
 	
 	handleTreeSelect = (selectNode = {}) => {
+        let {targetKeys}  = this.state;
         let startFlag,endFlag;
         if(selectNode.refcode==="fzl"){
             startFlag = 10;
@@ -25,17 +26,21 @@ class Demo1 extends Component {
             startFlag=0;
             endFlag=18;
         }
+        let selectedData = this.transferData.filter(v => {
+			return targetKeys.some(key => key == v['refcode'])
+		});
+		let temp = this.transferData.slice(startFlag,endFlag)
+        let tempTransferData = temp.concat(selectedData);
 		this.setState({
-			transferData: this.transferData.slice(startFlag,endFlag),
+			transferData:tempTransferData,
 		});
 	}
 	transferSave = () => {
-		let { valueField } = this.props;
 		var { transferData, targetKeys } = this.state;
 		let needTransferData = [];
 		targetKeys.forEach((v, i) => {
 			transferData.forEach((v2, i2) => {
-				if (v == v2[valueField]) {
+				if (v == v2['refcode']) {
 					needTransferData.push(v2)
 				}
 			})
@@ -49,7 +54,7 @@ class Demo1 extends Component {
 		let{confirmTargetKeys} = this.state;
 		let cancelTargetKeys = [] ;
 		confirmTargetKeys.forEach((v, i) => {
-			cancelTargetKeys.push(v[this.props.valueField])
+			cancelTargetKeys.push(v['refcode'])
 		});
 		this.setState({
 			targetKeys:cancelTargetKeys,

@@ -24,9 +24,8 @@ export default class TransferDiv extends Component {
 		this.setState({ transferData, targetKeys });
 	}
 	componentWillReceiveProps(nextProps) {
-		var { transferData } = nextProps
-
-		this.setState({ transferData });
+		var { transferData,targetKeys } = nextProps
+		this.setState({ transferData,targetKeys });
 	}
 
 	filterOption = (inputValue, option) => {
@@ -188,16 +187,15 @@ export default class TransferDiv extends Component {
 
 	render() {
 		const noDataDisplay = (<div>无数据</div>);
-		var { transferData, sourceDesc, targetDesc, selectedKeys, targetKeys, buttons } = this.state;
+		var { transferData, sourceDesc, targetDesc, selectedKeys, targetKeys } = this.state;
 		var { displayField, valueField, isHasSearch, searchPlaceholder="搜索",notFoundContent= noDataDisplay } = this.props
-		let saveButton = "确定"
 		var tempTransferData = transferData.filter(v => typeof (v) == 'object').map((v, k) => {
 			v.key = v[valueField]
 			if (typeof displayField === 'function') {
 				v.title = displayField(v);
 			} else {
 				v.title = displayField.format(v);
-			}//*****&*&*&*&*&*修改
+			}
 			return v
 		})
 
@@ -227,7 +225,6 @@ export default class TransferDiv extends Component {
 				
 				<div className={'transferWrap'} style={!leftTransferText&&!rightTransferText?{marginTop:15}:{}}>
 					<Transfer
-						
 						showSearch={isHasSearch ? false : true}
 						dataSource={tempTransferData}
 						onSelectChange={this.onSelectChange.bind(this)}
