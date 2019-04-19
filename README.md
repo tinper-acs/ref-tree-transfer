@@ -60,8 +60,7 @@ transferData| `Array` | [] | 右穿梭的数据| 否
 
 
 ## RefTreeTransferWithInput 增量 API
-除了使用上述<RefTreeTransferBaseUI/>的参数（showModal不可使用）还有
-以下参数。下面的参数是 <RefTreeTransferWithInput/>独有。对<RefTreeTransferBaseUI/>使用无效
+除了使用上述<RefTreeTransferBaseUI/>的参数（showModal不可使用）还有以下参数。
 
 参数 | 类型 |默认值| 说明 | 必选
 ---|---|--- | --- | ---
