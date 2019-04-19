@@ -1,6 +1,6 @@
 /**
  *
- * @title RefTreeTransferWithInput
+ * @title 基本示例2
  * @description 使用RefTreeTransferWithInput，带有input框
  *
  */

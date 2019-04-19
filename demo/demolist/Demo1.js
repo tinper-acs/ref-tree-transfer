@@ -1,6 +1,6 @@
 /**
  *
- * @title RefTreeTransferBaseUI
+ * @title 基本示例1
  * @description 使用RefTreeTransferBaseUI，无input框
  *
  */
