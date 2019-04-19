@@ -1,5 +1,4 @@
-# 树穿梭参照 ref-tree-transfer
-
+# 树穿梭参照 RefTreeTransfer
 ## 何时使用
 
 树穿梭参照
@@ -13,11 +12,13 @@ $ ynpm install ref-tree-transfer --save
 
 引入
 
-import RefTreeTransferBaseUI from 'ref-tree-transfer';
+import RefTreeTransferBaseUI from 'ref-tree-transfer/lib/index';
+或者
+import { RefTreeTransferWithInput } from 'ref-tree-transfer/lib/index';
 
 样式
 
-import 'ref-tree-transfer/dist/index.css';
+import 'ref-tree-transfer/lib/index.css';
 
 ```
 
@@ -80,8 +81,8 @@ canInputGoOn|`function()`| ()=>{return true}|当点击文本框触发快捷录�
 
 ## 注意事项
 
-
 暂无
+
 
 ## 更新日志
 
