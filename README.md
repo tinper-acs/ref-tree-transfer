@@ -77,5 +77,11 @@ canClickGoOn|`function()`| ()=>{return true}|当点击文本框右侧弹出按�
 canInputGoOn|`function()`| ()=>{return true}|当点击文本框触发快捷录入时是否可以录入<br>适用于级联情况下当选择不全时的处理| 否 
 
 
+
+## 注意事项
+
+
+暂无
+
 ## 更新日志
 
