@@ -5,7 +5,7 @@
  *
  */
 import React, { Component } from 'react';
-import RefTreeTransferBaseUI,{RefTreeTransferWithInput} from '../../src/index';
+import RefTreeTransferBaseUI from '../../src/index';
 import '../../src/index.less';
 import {Button} from 'tinper-bee';
 class Demo1 extends Component {

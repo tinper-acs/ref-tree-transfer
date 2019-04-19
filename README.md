@@ -1,5 +1,4 @@
 # 树穿梭参照 RefTreeTransfer
-
 ## 何时使用
 
 树穿梭参照
@@ -7,17 +6,18 @@
 
 ## 如何使用
 
-
 ```
 $ ynpm install ref-tree-transfer --save
 
 引入
 
-import RefTreeTransferBaseUI from 'ref-tree-transfer';
+import RefTreeTransferBaseUI from 'ref-tree-transfer/lib/index';
+或者
+import { RefTreeTransferWithInput } from 'ref-tree-transfer/lib/index';
 
 样式
 
-import 'ref-tree-transfer/dist/index.css';
+import 'ref-tree-transfer/lib/index.css';
 
 ```
 
