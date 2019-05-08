@@ -77,8 +77,8 @@
   margin: 0;
   padding-top: 150px;
 }
-.ref-red .transferWrap .u-transfer-operation .u-button-sm,
-.ref-blue .transferWrap .u-transfer-operation .u-button-sm {
+.ref-red .transferWrap .u-transfer-operation .u-button,
+.ref-blue .transferWrap .u-transfer-operation .u-button {
   margin-left: 10px;
   margin-bottom: 15px;
   width: 40px;
