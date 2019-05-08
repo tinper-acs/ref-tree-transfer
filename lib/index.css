@@ -88,17 +88,18 @@
   border-radius: 3px;
   border: none;
 }
+.ref-red .transferWrap .u-button .uf.uf-arrow-left,
+.ref-blue .transferWrap .u-button .uf.uf-arrow-left,
+.ref-red .transferWrap .u-button .uf.uf-arrow-right,
+.ref-blue .transferWrap .u-button .uf.uf-arrow-right {
+  font-size: 16px;
+  display: inline-block;
+  height: 100%;
+  line-height: 26px;
+}
 .ref-red .transferWrap .u-transfer-operation .u-button-sm[disabled],
 .ref-blue .transferWrap .u-transfer-operation .u-button-sm[disabled] {
   background-color: rgba(216, 216, 216, 0.17);
-}
-.ref-red .transferWrap .u-button .uf.uf-arrow-left,
-.ref-blue .transferWrap .u-button .uf.uf-arrow-left {
-  font-size: 18px;
-}
-.ref-red .transferWrap .u-button .uf.uf-arrow-right,
-.ref-blue .transferWrap .u-button .uf.uf-arrow-right {
-  font-size: 18px;
 }
 .ref-red .allTransferRightBtnStyle,
 .ref-blue .allTransferRightBtnStyle {
