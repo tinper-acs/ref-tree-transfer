@@ -41123,7 +41123,7 @@ var TransferDiv = function (_Component) {
 				}
 			});
 		});
-		console.log(targetKeys, selectedKeys, selectedTargetKeys);
+		// console.log(targetKeys, selectedKeys, selectedTargetKeys)
 		if (selectedTargetKeys.length == 1) {
 			this.scopeupupRecord(targetKeys, selectedTargetKeys[0].index);
 			this.setState({
@@ -41179,7 +41179,7 @@ var TransferDiv = function (_Component) {
 				}
 			});
 		});
-		console.log(targetKeys, selectedKeys, selectedTargetKeys);
+		// console.log(targetKeys, selectedKeys, selectedTargetKeys)
 		if (selectedTargetKeys.length == 1) {
 			this.scopedownRecord(targetKeys, selectedTargetKeys[0].index);
 			this.setState({
@@ -41201,7 +41201,7 @@ var TransferDiv = function (_Component) {
 				}
 			});
 		});
-		console.log(targetKeys, selectedKeys, selectedTargetKeys);
+		// console.log(targetKeys, selectedKeys, selectedTargetKeys)
 		if (selectedTargetKeys.length == 1) {
 			this.scopedowndownRecord(targetKeys, selectedTargetKeys[0].index);
 			this.setState({
@@ -42333,6 +42333,10 @@ var TransferList = function (_React$Component) {
     var filteredDataSource = [];
     var totalDataSource = [];
     var showItems = dataSource.map(function (item, index) {
+      if (!item) {
+        return;
+      }
+
       var _renderItem = _this4.renderItem(item),
           renderedText = _renderItem.renderedText,
           renderedEl = _renderItem.renderedEl;
