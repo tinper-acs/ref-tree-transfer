@@ -117,7 +117,7 @@ class Demo2 extends Component {
 		return (
 			<div>
 					<RefTreeTransferWithInput {...baseProps}/>
-					<Button onClick={()=>{this.setState({targetKeys:[]});this.value=''}}> 清空</Button>
+					<Button colors="primary"  onClick={()=>{alert(JSON.stringify(this.state.targetKeys))}}> 提交</Button>
 			</div>
 		);
 	}
