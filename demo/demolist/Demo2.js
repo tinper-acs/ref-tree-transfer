@@ -9,17 +9,8 @@ import {RefTreeTransferWithInput} from '../../src/index';
 import { Button } from 'tinper-bee';
 import '../../src/index.less';
 let op =  {
-	title : '参照默认标题',
-	textOption : { leftTitle : '默认树标题', rightTitle : '默认穿梭框', leftInfo :[], rightInfo :[] },
-	className:'',
-	backdrop:true,
-	refModelUrl:{},
 	displayField:'{refname}-{refcode}',
 	valueField:'refcode',
-	lang:'zh_CN',
-	theme : 'ref-red',
-	searchPlaceholder:'搜索自定义',
-	notFoundContent:'暂无数据自定义',
 };
 class Demo2 extends Component {
 	constructor(props) {

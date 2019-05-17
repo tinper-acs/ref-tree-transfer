@@ -28767,7 +28767,7 @@ var RefTreeTransferBaseUI = function (_Component) {
         setTargetKeys = _props.setTargetKeys,
         targetKeys = _props.targetKeys,
         _props$defaultExpandA = _props.defaultExpandAll,
-        defaultExpandAll = _props$defaultExpandA === undefined ? true : _props$defaultExpandA;
+        defaultExpandAll = _props$defaultExpandA === undefined ? false : _props$defaultExpandA;
     var _textOption$leftTitle = textOption.leftTitle,
         leftTitle = _textOption$leftTitle === undefined ? '默认树标题' : _textOption$leftTitle,
         _textOption$rightTitl = textOption.rightTitle,
@@ -48607,7 +48607,7 @@ var leftTree = function (_Component) {
 				_react2.default.createElement(
 					_beeTree2.default,
 					{
-						checkStrictly: false,
+						checkStrictly: true,
 						multiple: false,
 						onExpand: this.onExpand,
 						defaultExpandAll: defaultExpandAll,

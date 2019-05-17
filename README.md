@@ -59,10 +59,9 @@ tree专用
 handleTreeSelect| `function(selectNode)` | --| 左树选择节点回调 | 否
 treeData| `Array` | [] | 左树的数据| 否
 nodeDisplay |<code>string 或 function</code>|'{refname}' |指定树节点渲染内容，这里为了提供根据数据渲染节点图标使用。<br/>当为字符串时则会根据`{}`包裹的正则匹配替换。<br/>如： nodeDisplay:'{refname}'<br/>当为函数时则需自定义返回内容，参数为迭代已选择的记录。<br/>如：<br/>displayField: (record)=>  ${record.refname}-${record.refname}。是树节点展示的内容| 否
-defaultExpandAll |`bool`| true| 展开所有节点，true 展开，false 不展开| 否
+defaultExpandAll |`bool`| false| 展开所有节点，true 展开，false 不展开| 否
 
-tree默认checkStrictly={false}、multiple={false}、defaultExpandAll={true}
-
+tree默认checkStrictly={true}、multiple={false}
 transfer专用
 参数 | 类型 |默认值| 说明 | 必选
 ---|---|--- | --- | ---

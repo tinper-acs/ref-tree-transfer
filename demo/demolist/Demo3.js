@@ -9,8 +9,8 @@ import {RefTreeTransferWithInput} from '../../src/index';
 import { Button } from 'tinper-bee';
 import '../../src/index.less';
 let op =  {
-	title : '参照默认标题',
-	textOption : { leftTitle : '默认树标题', rightTitle : '默认穿梭框', leftInfo :[], rightInfo :[] },
+	title : '这里是树穿梭',
+	textOption : { leftTitle : '左侧标题', rightTitle : '右侧穿梭', leftInfo :[], rightInfo :[] },
 	className:'',
 	backdrop:true,
 	refModelUrl:{},

@@ -102,7 +102,7 @@ class RefTreeTransferBaseUI extends Component {
       transferData=[],
       setTargetKeys,
       targetKeys,
-      defaultExpandAll=true,
+      defaultExpandAll=false,
     } = this.props;
     let { leftTitle = '默认树标题', rightTitle = '默认穿梭框' } = textOption;
     return (

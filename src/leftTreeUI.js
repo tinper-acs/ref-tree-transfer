@@ -153,7 +153,7 @@ export default class leftTree extends Component {
 				/>
 				<div className={'leftTreeStyle'}>
 					<Tree
-						checkStrictly={false}
+						checkStrictly={true}
 						multiple={false}
 						onExpand={this.onExpand}
 						defaultExpandAll={defaultExpandAll}
