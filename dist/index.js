@@ -28780,6 +28780,7 @@ var RefTreeTransferBaseUI = function (_Component) {
         className: ' ' + theme + ' ref-core-modal ' + className + ' ref-core ref-tree-transfer',
         size: 'xlg',
         backdrop: backdrop,
+        autoFocus: false,
         onHide: function onHide() {
           _this2.onClickBtn('cancel');
         }
