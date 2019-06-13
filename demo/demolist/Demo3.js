@@ -11,8 +11,8 @@ import '../../src/index.less';
 import request from './request';
 let options;
 let refModelUrl = {
-  treeUrl: '/pap_basedoc/common-ref/blobRefTree',
-  tableBodyUrl: '/pap_basedoc/common-ref/blobRefTreeGrid',
+  treeUrl: 'https://mock.yonyoucloud.com/mock/1264/pap_basedoc/common-ref/blobRefTree',
+  tableBodyUrl: 'https://mock.yonyoucloud.com/mock/1264/pap_basedoc/common-ref/blobRefTreeGrid',
 };
 class Demo3 extends Component {
   constructor(props) {
@@ -150,7 +150,7 @@ class Demo3 extends Component {
 
       canClickGoOn: this.canClickGoOn,
 
-      filterUrl:'/pap_basedoc/common-ref/blobRefTreeGrid',
+      filterUrl:'https://mock.yonyoucloud.com/mock/1264/pap_basedoc/common-ref/blobRefTreeGrid',
       multiple:true,
     }
     return (
