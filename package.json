@@ -12,7 +12,10 @@
     "lint": "eslint --ext .js --ext .jsx src/",
     "lint-fix": "eslint --fix --ext .js --ext .jsx src/",
     "precommit": "npm run lint",
-    "deploy": "npm run clear:gh-pages && webpack --config config/webpack.config.ghpages.js"
+    "deploy": "npm run clear:gh-pages && webpack --config config/webpack.config.ghpages.js",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
+    "postversion": "git push --follow-tags",
+    "prepublishOnly": "npm run build"
   },
   "bugs": {
     "url": "https://github.com/tinper-acs/ref-tree-transfer/issues"
